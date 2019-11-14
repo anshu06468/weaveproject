@@ -1,0 +1,128 @@
+body{
+  margin:0;
+  padding:0;
+  background-image:linear-gradient(to right ,black,white);
+}
+ul.nav li a:hover{
+  background-color:none !important;
+}
+a{
+  color:white !important;
+}
+.box1{
+  margin-top:25px !important;
+  box-shadow: 1px 1px 0px #999,
+  2px 2px 0px #999,
+  3px 3px 0px #999,
+  4px 4px 0px #999,
+  5px 5px 0px #999,
+  6px 6px 0px #999;;
+  margin-left:15px;
+}
+.marked{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  border:2px solid blue !important;
+}
+.selected {
+  border: 1px solid #C00;
+}
+.panel-body{
+  padding: 7px !important;
+  background-color: #00000042;
+}
+.panel-group{
+  margin-top:25px;
+}
+.border{
+  height:100px;
+  width: 100px;
+  border:1px solid #123456;
+  margin:5px;
+  cursor: pointer;
+}
+.border:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.text{
+  font-size:15px;
+  font-weight: bold;
+}
+.p{
+  cursor:pointer;
+}
+
+
+.border img{
+  height:100%;
+  width:100%;
+}
+.list,.list1,.list2{
+  display:flex;
+  width:auto;
+  left:0;
+  /* overflow-x:hidden;  */
+  padding:1em;
+  position:absolute;
+}
+li {
+  list-style-type:none;
+  /* margin:auto 10px;  */
+}
+.icon{
+  display: flex;
+  z-index: 10;
+  align-items: center;
+  height: 100%;
+}
+.scroller-left1, .scroller-left2, .scroller-left3{
+  float: left;
+}
+.scroller-right1, .scroller-right2, .scroller-right3{
+  float: right;
+}
+.scroller{
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.wrapper{
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: hidden; 
+      height: 130px;
+} 
+
+
+.motif{
+  margin-top:25px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.motif-box{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:400px;
+  width:80%;
+  border:1px solid black;
+  border-radius: 8px;
+  box-shadow: -12px 15px 7px 2px #0000001f;
+}
+.motif-box img{
+  height: 100%;
+  width: 100%;
+}
+
+.submit{
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 8px 7px 2px #0000001f;
+  /* margin-bottom: 0px; */
+}
+
