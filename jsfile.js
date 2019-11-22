@@ -10,13 +10,13 @@ var count=0;
 function addborder(){
   if(numer>6){
     for(var i=numer;i<numer+3 ;i++){
-      $(".list").append('<li><div class="border"><img class="image" id="border'+i+'" src="border.jpg"></div></li>') ;
-    }
+      $(".list").append('<li><div class="border"><img class="image" id="border'+i+'"src="border.jpg"></div></li>') ;
+     }
   }
   else{
     for(var i=numer;i<numer+6;i++){
-      $(".list").append('<li><div class="border"><img class="image" id="border'+i+'" src="border.jpg"></div></li>') ;
-     }
+      $(".list").append('<li><div class="border"><img class="image" id="border'+i+'"src="border.jpg"></div></li>') ;
+    }
   }
    numer+=3;
 }
@@ -66,11 +66,11 @@ $(document).ready(function(){
   var flag3=false;
 // Right shift
   $(".scroller-right1").click(function(){
-    // var lft=parseInt($(".list").css("left"),10);
+    var lft=parseInt($(".list").css("left"),10);
     if(numer<12){
     addborder();
     $(".list").animate({left:'-=330px'});
-    console.log(left);
+    // console.log(left);
     }
     else{
       if(flag1)
@@ -86,12 +86,20 @@ $(document).ready(function(){
     addbody();
     $(".list1").animate({left:'-=330px'});
     }
+    else{
+      if(flag2)
+        $(".list1").animate({left:'-=330px'});
+    }
   });
 
   $(".scroller-right3").click(function(){
     if(numer2<12){
     addpallu();
     $(".list2").animate({left:'-=330px'});
+    }
+    else{
+      if(flag3)
+        $(".list2").animate({left:'-=330px'});
     }
   });
 
@@ -102,7 +110,7 @@ $(document).ready(function(){
     if(lft<0){
     $(".list").animate({left:'+=330px'});
     flag1=true;
-    console.log(left);
+    // console.log(left);
     }
     else
       flag1=false;
@@ -113,14 +121,20 @@ $(document).ready(function(){
     var lft=parseInt($(".list1").css("left"),10);
     if(lft<0){
     $(".list1").animate({left:'+=330px'});
+      flag2=true;
     }
+    else 
+      flag2=false;
   });
 
   $(".scroller-left3").click(function(){
     var lft=parseInt($(".list2").css("left"),10);
     if(lft<0){
     $(".list2").animate({left:'+=330px'});
+      flag3=true;
     }
+    else
+      flag3=false;
   });
 
   $(".border").click(function(e){
@@ -133,24 +147,25 @@ $(document).ready(function(){
     // console.log("welcome");
     bigmotif(ide);
   });
+// })
 $('.submit').click(function(){
   $('.border').each(function(evt){
     if($(this).hasClass('marked')){
        var temp= ($(this).children())[0];
         if(temp.id.includes("body")){
-          res.body.push(temp.src);
+          res.body.push(temp.url);
         }
         else if(temp.id.includes("border")){
-          res.border.push(temp.src);
+          res.border.push(temp.url);
         }
         else{
-          res.pallu.push(temp.src);
+          res.pallu.push(temp.url);
         }
       // res.push(temp)
-      // console.log(res);
+      console.log(res);
     }
   })
-  console.log(res)
-  });
+  // console.log(res)
+});
 })
 

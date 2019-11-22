@@ -1,22 +1,20 @@
 body{
   margin:0;
   padding:0;
-  background-image:linear-gradient(to right ,black,white);
+  background-image:linear-gradient(to right ,black,#676262d9);
 }
-ul.nav li a:hover{
-  background-color:none !important;
+.header{
+  /* background-image:linear-gradient(to right,#6c2a5661?,#6b2a57); */
 }
-a{
+.nav>li>a{
   color:white !important;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+  background-color:#74747487 !important;
 }
 .box1{
   margin-top:25px !important;
-  box-shadow: 1px 1px 0px #999,
-  2px 2px 0px #999,
-  3px 3px 0px #999,
-  4px 4px 0px #999,
-  5px 5px 0px #999,
-  6px 6px 0px #999;;
+  box-shadow: 8px 8px 0px #0000001f;
   margin-left:15px;
 }
 .marked{
@@ -28,11 +26,8 @@ a{
   border: 1px solid #C00;
 }
 .panel-body{
-  padding: 7px !important;
-  background-color: #00000042;
-}
-.panel-group{
-  margin-top:25px;
+  padding: 0px !important;
+  background-color: #00000073;
 }
 .border{
   height:100px;
@@ -48,6 +43,12 @@ a{
 .text{
   font-size:15px;
   font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+.text>a{
+  text-decoration: none;
+  color: black;
 }
 .p{
   cursor:pointer;
@@ -110,19 +111,35 @@ li {
   justify-content: center;
   height:400px;
   width:80%;
-  border:1px solid black;
+  /* border:1px solid black; */
   border-radius: 8px;
   box-shadow: -12px 15px 7px 2px #0000001f;
 }
 .motif-box img{
   height: 100%;
   width: 100%;
+  border-radius: 8px;
 }
-
-.submit{
+.btn-group{
   margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 1px 8px 7px 2px #0000001f;
+}
+.submit{
+  margin-top:15px;
+  border-radius: 8px;
+
   /* margin-bottom: 0px; */
 }
 
+.modal-box{
+  height:200px;
+  width:200px;
+  background-color: blue;
+  display: block;
+  margin-top:13px;
+}
+.mdl{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
